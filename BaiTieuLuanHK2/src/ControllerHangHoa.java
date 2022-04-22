@@ -44,7 +44,7 @@ public class ControllerHangHoa {
                         sc.nextLine();
                         System.out.println("Nhập ngày sản xuất của Hàng Hoá: [dd/MM/yyyy]");
                         nSX = sf.parse(sc.nextLine());
-                        System.out.println("Nhập hạn sử dụng của Hàng Hoá: [dd/MM/yyyy");
+                        System.out.println("Nhập hạn sử dụng của Hàng Hoá: [dd/MM/yyyy]");
                         hSD = sf.parse(sc.nextLine());
                         System.out.println("Nhập nhà cùng cấp của Hàng Hoá:");
                         nhaCC = sc.nextLine();
@@ -104,8 +104,8 @@ public class ControllerHangHoa {
             HangHoa hangSanhSu4 = new HangSanhSu(8, 400, "Nồi sứ", 120000, "HCM", date3);
             HangHoa hangDienMay1 = new HangDienMay(9, 1000, "Tủ Lạnh", 5000000, 12, 90);
             HangHoa hangDienMay2 = new HangDienMay(10, 2000, "Máy Lạnh", 6000000, 12, 100);
-            HangHoa hangDienMay3 = new HangDienMay(11, 3000, "Máy Giặt", 7000000, 12, 110);
-            HangHoa hangDienMay4 = new HangDienMay(12, 4000, "Máy Lọc Nước", 8000000, 12, 120);
+            HangHoa hangDienMay3 = new HangDienMay(11, 4000, "Máy Giặt", 7000000, 12, 110);
+            HangHoa hangDienMay4 = new HangDienMay(12, 3000, "Máy Lọc Nước", 8000000, 12, 120);
             danhSachHangHoaQuanLy.themHangHoa(hangThucPham1);
             danhSachHangHoaQuanLy.themHangHoa(hangThucPham2);
             danhSachHangHoaQuanLy.themHangHoa(hangThucPham3);
@@ -134,7 +134,7 @@ public class ControllerHangHoa {
             System.out.println("4._______________Tìm kiếm Hàng Hoá_____________");
             System.out.println("5._______________Sắp xếp Hàng Hoá______________");
             System.out.println("6._______________Hiện Thị Danh Sách____________");
-            System.out.println("7._______________Thống Kê Hàng Hoá____________");
+            System.out.println("7._______________Thống Kê Hàng Hoá_____________");
             System.out.println("=================EXIT==========================");
             System.out.println("Nhập lựa chọn của bạn là:");
             int lc = sc.nextInt();
@@ -171,7 +171,7 @@ public class ControllerHangHoa {
                     danhSachHangHoaQuanLy.hienThiHangHoa();
                     break;
                 case 7: 
-                    System.out.println("Bạn đã chọn chức năng Thống kê hàng hoá");
+                    System.out.println("Bạn đã chọn chức năng Thống Kê Hàng Hoá");
                     danhSachHangHoaQuanLy.tinhSLHangTonKho();
                     danhSachHangHoaQuanLy.tongSlHangHoaTonKho();
                     danhSachHangHoaQuanLy.tongHangHoa();

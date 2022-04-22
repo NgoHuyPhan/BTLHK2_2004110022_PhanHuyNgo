@@ -55,15 +55,4 @@ public abstract class HangHoa {
         return "HangHoa [donGia=" + donGia + ", maHang=" + maHang + ", sLTonKho=" + sLTonKho + ", tenHang=" + tenHang
                 + "]";
     }
-
-
-
-
-
-
-    
-   
-    
-
-    
 }

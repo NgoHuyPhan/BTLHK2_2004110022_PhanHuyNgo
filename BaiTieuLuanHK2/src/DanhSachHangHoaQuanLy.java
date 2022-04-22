@@ -51,7 +51,7 @@ public class DanhSachHangHoaQuanLy {
     public void setsLHangDienMay(int sLHangDienMay) {
         this.sLHangDienMay = sLHangDienMay;
     }
-    private void xoaHangHoa(HangHoa hangHoa) {
+    public void xoaHangHoa(HangHoa hangHoa) {
         this.danhSach.remove(hangHoa);
     }
     public void xoaHangHoa() {
@@ -71,15 +71,6 @@ public class DanhSachHangHoaQuanLy {
             System.out.println("Hàng Hoá Không Tồn Tại");
         }
     }
-    public int timViTri(HangHoa hangHoa){
-        int viTri = -1;
-        viTri = this.danhSach.indexOf(viTri);
-        return viTri;
-    }
-    public void suaHangHoa(int viTri, HangHoa hangHoa) {
-        this.danhSach.set(viTri, hangHoa);
-    }
-      
     public HangHoa timKiemHangHoa(int maHang) {
         HangHoa hangHoa = null;
         for (HangHoa h : danhSach) {
@@ -104,11 +95,11 @@ public class DanhSachHangHoaQuanLy {
         Collections.sort(danhSach, new Comparator<HangHoa>() {
             @Override
             public int compare(HangHoa o1, HangHoa o2) {
-                if (o1.getDonGia() < o2.getDonGia()) {
+                if (o1.getsLTonKho() < o2.getsLTonKho()) {
                     System.out.println("Sap Xep Thanh Cong");
                     return 1;
                 } else {
-                    if (o1.getDonGia() == o2.getDonGia()) {
+                    if (o1.getsLTonKho() == o2.getsLTonKho()) {
                         return 0;
                     } else {
                         return -1;
@@ -143,7 +134,7 @@ public class DanhSachHangHoaQuanLy {
             }
         }
     }
-    
+
 }
 
     
